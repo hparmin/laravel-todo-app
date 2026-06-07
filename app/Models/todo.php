@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class todo extends Model
 {
     use SoftDeletes;
+
+    protected $guarded = [];
+
 }
