@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active border-end">
-                        <a class="nav-link" aria-current="page" href="#">Todo app</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('todo.index') }}">Todo app</a>
                     </li>
                     <li class="nav-item border-end">
-                        <a class="nav-link" href="#">Todo</a>
+                        <a class="nav-link" href="{{ route('todo.index') }}">Todo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Category</a>
+                        <a class="nav-link" href="{{ route('category.index') }}">Category</a>
                     </li>
                 </ul>
             </div>

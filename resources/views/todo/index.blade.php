@@ -3,7 +3,7 @@
 <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-12 col-xl-10">
         <div class="card mask-custom">
-            <table class="table text-white mb-0">
+            <table class="castom-table table text-white mb-0">
                 <thead>
                 <tr>
                     <th scope="col">Image</th>
