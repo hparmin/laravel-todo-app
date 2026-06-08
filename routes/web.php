@@ -7,8 +7,13 @@ use App\Http\Controllers\CategoryController;
 // To do routes
 Route::get('/',[TodoController::class,'index'])->name('todo.index');
 Route::get('/todo/create',[TodoController::class,'create'])->name('todo.create');
+Route::get('/todo/{todo}',[TodoController::class,'show'])->name('todo.show');
 Route::post('/todo',[TodoController::class,'store'])->name('todo.store');
 Route::delete('/todo/{todo}',[TodoController::class,'destroy'])->name('todo.destroy');
+Route::get('/todo/{todo}/complete',[TodoController::class,'complete'])->name('todo.complete');
+Route::get('/todo/{todo}/doing',[TodoController::class,'doing'])->name('todo.doing');
+Route::get('/todo/{todo}/edit',[TodoController::class,'edit'])->name('todo.edit');
+Route::put('/todo/{todo}',[TodoController::class,'update'])->name('todo.update');
 
 
 
