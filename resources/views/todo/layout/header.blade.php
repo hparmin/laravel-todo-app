@@ -33,8 +33,11 @@
                     <li class="nav-item border-end">
                         <a class="nav-link" href="{{ route('todo.index') }}">Todo</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item border-end">
                         <a class="nav-link" href="{{ route('category.index') }}">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('email.index') }}">Send Email</a>
                     </li>
                 </ul>
             </div>

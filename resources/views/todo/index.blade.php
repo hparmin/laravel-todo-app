@@ -31,11 +31,20 @@
                                 <h6 class="mb-0"><span class="text-bg-info">{{ $todo->category->title }}</span></h6>
                             </td>
                             <td class="align-middle">
+                                    <?php
+                                    if (isset($_GET['page'])) {
+                                        $page = $_GET['page'];
+                                    } else {
+                                        $page = 1;
+                                    }
+                                    ?>
                                 @if($todo->status)
-                                    <a href="{{ route('todo.doing' , ['todo' => $todo->id]) }}" type="button"
+                                    <a href="{{ route('todo.doing' , ['todo' => $todo->id])}}?page={{ $page }}"
+                                       type="button"
                                        class="btn btn-outline-danger">Completed</a>
                                 @else
-                                    <a href="{{ route('todo.complete' , ['todo' => $todo->id]) }}" type="button"
+                                    <a href="{{ route('todo.complete' , ['todo' => $todo->id]) }}?page={{ $page }}"
+                                       type="button"
                                        class="btn btn-outline-info">Done?</a>
                                 @endif
                                 <a href="{{ route('todo.show' , ['todo' => $todo->id]) }}" type="button"

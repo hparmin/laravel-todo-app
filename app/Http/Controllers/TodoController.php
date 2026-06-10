@@ -53,14 +53,14 @@ class TodoController extends Controller
         $todo->update([
             'status' => 1
         ]);
-        return redirect()->route('todo.index');
+        return redirect()->route('todo.index',['page' => $_GET['page']]);
     }
     public function doing(todo $todo)
     {
         $todo->update([
             'status' => 0
         ]);
-        return redirect()->route('todo.index');
+        return redirect()->route('todo.index',['page' => $_GET['page']]);
     }
     public function edit(todo $todo)
     {
